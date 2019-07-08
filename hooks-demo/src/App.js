@@ -2,6 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function OneTimeButton({ onClick }) {
+    return (
+        <button className="simple-button" onClick={onClick}>Click Me!</button>
+    );
+}
+
+function sayHello() {
+    alert("Hello");
+}
+
 function App() {
   return (
     <div className="App">
@@ -9,7 +19,7 @@ function App() {
         <p>
           Let's learn React Hooks!
         </p>
-        <button className="simple-button">Click Me!</button>
+        <OneTimeButton onClick={sayHello} />
       </header>
     </div>
   );
